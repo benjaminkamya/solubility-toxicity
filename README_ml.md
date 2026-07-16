@@ -6,10 +6,6 @@ constantly in computational pharmacology/chemistry:
 1. **Regression** — predicting solubility (a continuous number)
 2. **Classification** — predicting toxicity (a category: toxic / safe)
 
-Same workflow both times: molecule → numerical descriptors (RDKit) →
-train/test split → train a Random Forest → evaluate → see which
-features mattered most.
-
 Built as a bridge project before starting an MSc — first proper
 "real ML" project after two RDKit-based cheminformatics tools
 ([DrugLikenessEvaluator](https://github.com/benjaminkamya/DrugLikenessEvaluator),
@@ -48,6 +44,12 @@ Runs both tasks and prints:
 - Predicted vs actual results for every test molecule
 - Which molecular features mattered most for each task
 - Saves a prediction scatter plot: `solubility_predictions.png`
+
+Results:
+Each point represents one test-set compound. The x-axis shows its
+actual measured solubility (logS), the y-axis shows what the model
+predicted. Points closer to the dashed diagonal line indicate more
+accurate predictions.
 
 ## What this teaches
 
